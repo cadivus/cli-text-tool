@@ -1,6 +1,6 @@
 import argparse
 
-argparse_help="dings"
+argparse_help="Removes string \"Remove\" from text"
 argparse_name='--remove'
 argparse_nargs = 1
 argparse_metavar=('Remove')
@@ -16,5 +16,11 @@ def register_to_parser(parser):
 
 
 def remove(namespace, rem):
+  """
+  Remove string rem from text
+
+  :param namespace: Namespace of parser
+  :param rem: Remove this string
+  """
   namespace.text = namespace.text.replace(rem, '')
 

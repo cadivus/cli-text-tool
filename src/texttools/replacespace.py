@@ -1,6 +1,6 @@
 import argparse
 
-argparse_help="dings"
+argparse_help="Replaces all spaces in text with \"_\""
 argparse_name='--replacespace'
 argparse_nargs = 0
 
@@ -15,5 +15,10 @@ def register_to_parser(parser):
 
 
 def replacespace(namespace):
+  """
+  Replace all spaces in text with "_"
+
+  :param namespace: Namespace of parser
+  """
   namespace.text = namespace.text.replace(' ', '_')
 

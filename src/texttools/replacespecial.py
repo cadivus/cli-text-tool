@@ -1,6 +1,6 @@
 import argparse
 
-argparse_help="dings"
+argparse_help="Replaces special characters"
 argparse_name='--replacespecial'
 argparse_nargs = 0
 
@@ -15,6 +15,11 @@ def register_to_parser(parser):
 
 
 def replacespecial(namespace):
+  """
+  Replaces special characters
+
+  :param namespace: Namespace of parser
+  """
   namespace.text = namespace.text.replace(' ', '_')
   namespace.text = namespace.text.replace('ä', 'ae')
   namespace.text = namespace.text.replace('ö', 'oe')

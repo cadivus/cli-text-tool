@@ -1,6 +1,6 @@
 import argparse
 
-argparse_help="dings"
+argparse_help="Sets text to \"True\" if text contains string or to \"False\" if not."
 argparse_name='--contains'
 argparse_nargs = 1
 argparse_metavar=('Contains')
@@ -16,5 +16,11 @@ def register_to_parser(parser):
 
 
 def contains(namespace, cont):
+  """
+  Sets text to "True" if namespace.text contains string cont or to "False" if not.
+
+  :param namespace: Namespace of parser
+  :param cont: check for this string
+  """
   namespace.text = str(cont in namespace.text)
 
