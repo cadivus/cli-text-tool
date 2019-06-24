@@ -1,6 +1,6 @@
 # cli-text-tool
 
-This tool is for modifying string in scripts more easy.
+This tool is for modifying strings in scripts more easy.
 
 
 ## Help output
