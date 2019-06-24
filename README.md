@@ -1,5 +1,8 @@
 # cli-text-tool
 
+This tool is for modifying string in scripts more easy.
+
+
 ## Help output
 ```
 $ cli-text-tool --help
@@ -27,6 +30,12 @@ optional arguments:
 
 ```
 $ cli-text-tool "The Killer Robot Instability" --replacespace
+The_Killer_Robot_Instability
+```
+
+```
+$ bsp=$(cli-text-tool "The Killer Robot Instability" --replacespace)
+$ echo $bsp
 The_Killer_Robot_Instability
 ```
 
