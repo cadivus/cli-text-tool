@@ -1,5 +1,8 @@
 # cli-text-tool
 
+This tool is for modifying strings in scripts more easy.
+
+
 ## Help output
 ```
 $ cli-text-tool --help
@@ -21,4 +24,32 @@ optional arguments:
   --replacespace        Replaces all spaces in text with "_"
   --replacespecial      Replaces special characters
   --remove Remove       Removes string "Remove" from text
+```
+
+## Examples
+
+```
+$ cli-text-tool "The Killer Robot Instability" --replacespace
+The_Killer_Robot_Instability
+```
+
+```
+$ bsp=$(cli-text-tool "The Killer Robot Instability" --replacespace)
+$ echo $bsp
+The_Killer_Robot_Instability
+```
+
+```
+$ cli-text-tool "Der Hüpfburg-Enthusiasmus" --selectsplit 0 "-" --replacespecial
+Der_Huepfburg
+```
+
+```
+$ cli-text-tool "298_AfC11_-_Auf_den_Spuren_meines_Vaters.mp4" --selectsplit 1 "_-_" --remove ".mp4"
+Auf_den_Spuren_meines_Vaters
+```
+
+```
+$ cli-text-tool "298_AfC11_-_Auf_den_Spuren_meines_Vaters.mp4" --selectsplit 1 "_-_" --replace "_" " " --remove ".mp4"
+Auf den Spuren meines Vaters
 ```
