@@ -39,3 +39,8 @@ Der_Huepfburg
 $ cli-text-tool "298_AfC11_-_Auf_den_Spuren_meines_Vaters.mp4" --selectsplit 1 "_-_" --remove ".mp4"
 Auf_den_Spuren_meines_Vaters
 ```
+
+```
+$ cli-text-tool "298_AfC11_-_Auf_den_Spuren_meines_Vaters.mp4" --selectsplit 1 "_-_" --replace "_" " " --remove ".mp4"
+Auf den Spuren meines Vaters
+```
